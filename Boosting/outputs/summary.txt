@@ -1,0 +1,20 @@
+Train: 120, Test: 30
+Manual SAMME: 30 trees (max_depth=1)
+Single tree accuracy: 66.67%
+Boosting accuracy: 90.00%
+
+                 precision    recall  f1-score   support
+
+    Iris-setosa       1.00      1.00      1.00        10
+Iris-versicolor       0.82      0.90      0.86        10
+ Iris-virginica       0.89      0.80      0.84        10
+
+       accuracy                           0.90        30
+      macro avg       0.90      0.90      0.90        30
+   weighted avg       0.90      0.90      0.90        30
+
+Confusion matrix (rows=actual, columns=predicted):
+                 Iris-setosa  Iris-versicolor  Iris-virginica
+Iris-setosa               10                0               0
+Iris-versicolor            0                9               1
+Iris-virginica             0                2               8

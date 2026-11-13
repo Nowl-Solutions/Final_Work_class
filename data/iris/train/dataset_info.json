@@ -1,0 +1,58 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "iris",
+  "dataset_size": 8600,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/scikit-learn/iris@0bda0ce801be0fa2f464ff845a9d5ceae99aad7d/Iris.csv": {
+      "num_bytes": 5107,
+      "checksum": null
+    }
+  },
+  "download_size": 5107,
+  "features": {
+    "Id": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "SepalLengthCm": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "SepalWidthCm": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "PetalLengthCm": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "PetalWidthCm": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "Species": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 13707,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 8600,
+      "num_examples": 150,
+      "dataset_name": "iris"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

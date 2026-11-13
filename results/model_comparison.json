@@ -1,0 +1,242 @@
+{
+  "dataset": "scikit-learn/iris",
+  "seed": 42,
+  "train_samples": 120,
+  "test_samples": 30,
+  "features": [
+    "SepalLengthCm",
+    "SepalWidthCm",
+    "PetalLengthCm",
+    "PetalWidthCm"
+  ],
+  "classes": [
+    "Iris-setosa",
+    "Iris-versicolor",
+    "Iris-virginica"
+  ],
+  "ensemble_models": [
+    "svm",
+    "knn",
+    "naive_bayes",
+    "logistic_regression"
+  ],
+  "bagging_n_jobs": 4,
+  "boosting_requested_rounds": 4,
+  "boosting_model_weights": [
+    4.356708826689592,
+    3.4477173972970485,
+    2.354384588354187,
+    3.1804744627560546
+  ],
+  "y_test": [
+    0,
+    2,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    2,
+    1,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    0,
+    2,
+    1,
+    2,
+    2,
+    1,
+    1,
+    0,
+    2,
+    0
+  ],
+  "results": [
+    {
+      "method": "Single SVM",
+      "model_count": 1,
+      "correct": 29,
+      "test_samples": 30,
+      "accuracy": 0.9666666666666667,
+      "macro_f1": 0.9665831244778612,
+      "training_seconds": 0.003655464999610558,
+      "test_seconds": 0.0007015629962552339,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1
+        ],
+        [
+          0,
+          0,
+          10
+        ]
+      ],
+      "predictions": [
+        0,
+        2,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "method": "Bagging (4 types)",
+      "model_count": 4,
+      "correct": 27,
+      "test_samples": 30,
+      "accuracy": 0.9,
+      "macro_f1": 0.899749373433584,
+      "training_seconds": 3.8791317290015286,
+      "test_seconds": 0.0123517250031,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1
+        ],
+        [
+          0,
+          2,
+          8
+        ]
+      ],
+      "predictions": [
+        0,
+        2,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "method": "Boosting (4 types)",
+      "model_count": 4,
+      "correct": 29,
+      "test_samples": 30,
+      "accuracy": 0.9666666666666667,
+      "macro_f1": 0.9665831244778612,
+      "training_seconds": 0.03748486100084847,
+      "test_seconds": 0.0037605819961754605,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          1
+        ],
+        [
+          0,
+          0,
+          10
+        ]
+      ],
+      "predictions": [
+        0,
+        2,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        2,
+        0
+      ]
+    }
+  ]
+}

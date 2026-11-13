@@ -1,5 +1,6 @@
 Train: 120, Test: 30
 Manual SAMME: 30 trees (max_depth=1)
+Training time (fit only): 0.212311 seconds
 Single tree accuracy: 66.67%
 Boosting accuracy: 90.00%
 

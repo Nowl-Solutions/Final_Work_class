@@ -1,5 +1,6 @@
 """Manual AdaBoost (SAMME) บน Iris — รันด้วย python main.py"""
 from pathlib import Path
+from time import perf_counter
 
 import numpy as np
 import pandas as pd
@@ -90,7 +91,10 @@ def main():
     y_train, y_test = y[train], y[test]
 
     # 3. ฝึก Boosting เอง ไม่ใช้ AdaBoostClassifier
-    model = ManualAdaBoost(n_estimators=ROUNDS).fit(X_train, y_train)
+    model = ManualAdaBoost(n_estimators=ROUNDS)
+    start = perf_counter()
+    model.fit(X_train, y_train)
+    training_seconds = perf_counter() - start
     prediction = model.predict(X_test)
     classes = model.classes_
 
@@ -133,6 +137,7 @@ def main():
     summary = (
         f"Train: {len(train)}, Test: {len(test)}\n"
         f"Manual SAMME: {len(model.models_)} trees (max_depth=1)\n"
+        f"Training time (fit only): {training_seconds:.6f} seconds\n"
         f"Single tree accuracy: {baseline:.2%}\n"
         f"Boosting accuracy: {accuracy:.2%}\n\n"
         f"{report}\nConfusion matrix (rows=actual, columns=predicted):\n{matrix}\n"

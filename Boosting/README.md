@@ -46,7 +46,11 @@ python -m unittest -v
 - `sample_weights.csv` — แถว 0 คือน้ำหนักเริ่มต้น แถว t คือน้ำหนักหลังรอบ t; ชื่อคอลัมน์คือ Id ของข้อมูล train
 - `training_error.png` — กราฟสัดส่วนที่ ensemble ทาย train ผิดในแต่ละรอบ
 - `predictions.csv` — ชนิดจริงและชนิดที่ทำนาย พร้อม Id ของตัวอย่าง test
-- `summary.txt` — Accuracy, ผลรายคลาส และ Confusion Matrix
+- `summary.txt` — เวลาฝึก, Accuracy, ผลรายคลาส และ Confusion Matrix
+
+เวลาฝึกวัดด้วย `perf_counter()` เฉพาะการเรียก `fit()` รวมการคำนวณ Training Error
+และเก็บประวัติภายในแต่ละรอบ ไม่รวมโหลดข้อมูล ทำนาย test หรือสร้างกราฟ
+เวลาอาจต่างกันในแต่ละเครื่องและแต่ละครั้งที่รัน
 
 ผลรันครั้งนี้: ต้นไม้เดี่ยว **66.67%** เทียบกับ Manual Boosting **90.00%** (ถูก 27/30 ตัวอย่าง)
 Unit Tests ตรวจ Weighted Error, Alpha, Weight Update, Weighted Voting, ประวัติ Training Error
